@@ -92,7 +92,9 @@ function adicionarAoCarrinho(){
         removerAdicionado.innerText = `Remover produto`
 
 
-        removerAdicionado.addEventListener("click", removerProduto)
+        removerAdicionado.addEventListener("click", function(event){
+            removerProduto(event)
+        })
 
         valorTotal += carrinhoDeProdutos[i].value
 
@@ -154,7 +156,7 @@ function atualizarCarrinho (valorTotal){
     }
 }
 
-function removerProduto(){
+function removerProduto(event){
     produtosCarrinhos.classList.remove("overflow")
     let divARemover     = event.path[1]
     let produtoARemover = divARemover.querySelector("h3")
