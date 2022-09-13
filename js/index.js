@@ -158,9 +158,9 @@ function atualizarCarrinho (valorTotal){
 
 function removerProduto(event){
     produtosCarrinhos.classList.remove("overflow")
-    let divARemover     = event.path[1]
+    let divARemover     = event.composedPath()[1]
     let produtoARemover = divARemover.querySelector("h3")
-    let aRemover        = event.path[2]
+    let aRemover        = event.composedPath()[2]
 
     for (let i = 0; i < carrinhoDeProdutos.length; i++){
         if (produtoARemover.innerText == carrinhoDeProdutos[i].nameItem){
