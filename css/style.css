@@ -19,6 +19,16 @@ header {
     font-size: x-large;
 }
 
+.identidade a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.identidade a:hover{
+    font-weight: 800;
+    color: #37268C;
+}
+
 .secoes {
     width: 30%;
 }
@@ -41,7 +51,7 @@ nav li a:hover {
     font-size: large;
 }
 
-nav li .active {
+.active {
     font-weight: 700;
 }
 
@@ -187,7 +197,7 @@ main {
 
 .carrinhoPesquisa .carrinho {
     background-color: #F5F5F5;
-    min-height: 200px;
+    min-height: 436px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -272,7 +282,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-bottom: 50px;
+    padding-bottom: 183px;
 }
 
 .vazio .carrinhoVazio {
@@ -302,4 +312,11 @@ main {
     padding: 18px 13px 18px 13px;
     display: flex;
     justify-content: space-between;
+}
+
+.nenhum {
+    font-size: xx-large;
+    font-weight: 700;
+    padding: 100px 0 0 120px;
+    color: #37268C;
 }
