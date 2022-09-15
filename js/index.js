@@ -12,6 +12,7 @@ function produtosDisponiveis(){
     clicarIdentididade()
     navegacaoFuncional()
     barraDePesquisa()
+    darkMode()
     criarProdutos()
 }
 
@@ -132,7 +133,7 @@ function criarCarrinho(){
     acessarCarrinho.appendChild(atualCarrinho)
 }
 
-function atualizarCarrinho (valorTotal){
+function atualizarCarrinho(valorTotal){
     let atualCarrinho      = document.querySelector(".atualCarrinho")
     let somaProdutos       = document.querySelector(".somaProdutos")
     let atualQuantidade    = document.querySelector(".atualQuantidade")
@@ -308,12 +309,14 @@ function exibirApenas(event){
 
 function barraDePesquisa(){
     let botaoPesquisar = document.querySelector(".pesquisar .pesquisar button")
+    let pesquisaDeProduto = document.querySelector(".pesquisaDeProduto")
 
     botaoPesquisar.addEventListener("click", function(event){
         produtosClicados = []
         event.preventDefault()
         listaProdutos.innerHTML = ``
         procurarPorNome()
+        pesquisaDeProduto.value = ``
     })
     
 }
@@ -322,10 +325,10 @@ function procurarPorNome(){
     let pesquisaDeProduto = document.querySelector(".pesquisaDeProduto")
     for (let i = 0; i < data.length; i++){
         let nomeItem = data[i].nameItem
-        if (pesquisaDeProduto.value == "tshirt"){
+        if (pesquisaDeProduto.value.includes("tshirt")){
             pesquisaDeProduto.value = "t-shirt"
         }
-        let pesquisaNormalizada = pesquisaDeProduto.value.split(" ")
+        let pesquisaNormalizada = pesquisaDeProduto.value.trim().split(" ")
         for (let z = 0; z < pesquisaNormalizada.length; z++){
             let pesquisaUpper = pesquisaNormalizada[z].charAt(0).toUpperCase() + pesquisaNormalizada[z].slice(1)
             if (pesquisaUpper == "T-shirt"){
@@ -413,5 +416,33 @@ function clicarIdentididade (){
         listaProdutos.innerHTML = ``
         event.preventDefault()
         criarProdutos()
+        resetarAtivo()
+    })
+}
+
+function resetarAtivo() {
+    let secoes = document.querySelector(".secoes ul")
+    console.log(secoes.children)
+    for (let i = 0; i < secoes.children.length; i++){
+        let ativoAtual = secoes.children[i]
+        if(ativoAtual.classList.contains("active") == true){
+            ativoAtual.classList.remove("active")
+            secoes.children[0].classList.add("active")
+        }
+    }
+    listaProdutos.style.justifyContent = "space-between"
+}
+
+function darkMode(){
+    let body       = document.querySelector("body")
+    let darkMode   = document.querySelector(".darkToggle")
+
+    darkMode.addEventListener("click", function(){
+        body.classList.toggle("darkMode")
+        if (body.classList.contains("darkMode")){
+            darkMode.src = "./img/darkMode/sun-3-512.png"
+        } else {
+            darkMode.src = "./img/darkMode/crescent-moon-png-35115.png"
+        }
     })
 }

@@ -30,7 +30,7 @@ header {
 }
 
 .secoes {
-    width: 30%;
+    width: 50%;
 }
 
 .secoes ul {
@@ -43,16 +43,27 @@ header {
 }
 
 nav li a {
+    font-size: large;
     text-decoration: none;
     color: black;
 }
 
 nav li a:hover {
-    font-size: large;
+    font-size: x-large;
 }
 
 .active {
     font-weight: 700;
+}
+
+.navegacao button{
+    border: transparent;
+    background-color: #F5F5F5;
+}
+
+.navegacao .darkToggle {
+    max-width: 25px;
+    max-height: 25px;
 }
 
 .conteudo {
@@ -319,4 +330,144 @@ main {
     font-weight: 700;
     padding: 100px 0 0 120px;
     color: #37268C;
+}
+
+.darkMode {
+    background-color: #2e245efa;
+}
+
+.darkMode header {
+    background-color: #2E245E;
+    box-shadow: 0px 9px 20px -11px rgba(0,0,0,0.75);
+}
+
+.darkMode .identidade a {
+    color: #f5f5f5bc;
+}
+
+.darkMode .identidade a:hover{
+    color: #634ece;
+}
+
+.darkMode nav li a {
+    color: #F5F5F5;
+}
+
+.darkMode .listaProdutos .produtosDisponiveis .produto {
+    background-color: #2E245E;
+    color: #333333;
+    box-shadow: 0px 2px 17px -4px rgb(192 189 189);
+}
+
+.darkMode .listaProdutos .produtosDisponiveis .produto:hover{
+    box-shadow: 0px 2px 13px 0px rgba(255, 255, 255, 0.766);
+}
+
+.darkMode .imagemProduto {
+    background-color: #37268c42;
+}
+
+.darkMode .tituloProduto {
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.darkMode .descricaoProduto {
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.darkMode .precoProduto {
+    color: rgba(255, 255, 255, 0.884);
+}
+
+.darkMode .categoriasProduto .cadaCategoria {
+    background-color: #f5f5f585;
+    color: #000000;
+    font-weight: 500;
+}
+
+.darkMode .categoriasProduto .cadaCategoria:hover {
+    background-color: #ffffff;
+}
+
+.darkMode .adicionarCarrinho {
+    color: rgba(255, 255, 255, 0.719);
+    background-color: #2E245E;
+}
+
+.darkMode .pesquisaDeProduto {
+    background-color: #37268c42;
+    color: rgba(255, 255, 255, 0.897);
+}
+
+.darkMode .pesquisaDeProduto::placeholder{
+    color: rgba(255, 255, 255, 0.897);
+}
+
+.darkMode .pesquisar button {
+    color: rgba(255, 255, 255, 0.897);
+    background-color: #37268C;
+}
+
+.pesquisar button:hover {
+    color: rgb(255, 255, 255);
+    background-color:#2d2458;
+}
+
+.darkMode .carrinhoPesquisa .carrinho {
+    background-color: #2E245E;
+}
+
+.darkMode .carrinhoPesquisa .carrinho .acessarCarrinho {
+    background-color: #37268C;
+}
+
+.darkMode .carrinhoPesquisa .carrinho .acessarCarrinho h2 {
+    color: #fff;
+}
+
+.darkMode .carrinho .produtosCarrinhos {
+    background-color: #37268c00;
+    color: #828080;
+}
+
+.darkMode .carrinho .produtosCarrinhos .produtosAdicionados{
+    background-color: #37268c00;
+    color: #828080;
+}
+
+.darkMode .carrinho .produtosCarrinhos .produtosAdicionados .adicionadoImagem {
+    background-color: #37268c42;
+}
+
+.darkMode .carrinho .produtosCarrinhos .produtosAdicionados .adicionadoInformacoes h3 {
+    color: rgba(255, 255, 255, 0.719);
+}
+
+.darkMode  .carrinho .produtosCarrinhos .produtosAdicionados .removerAdicionado {
+    color: #F5F5F5;
+    background-color: #37268c00;
+}
+
+
+.darkMode  .carrinho .atualCarrinho {
+    background-color: #333333;
+    color: #fff;
+}
+
+.darkMode .nenhum {
+    background-color: #37268c00;
+    color: rgba(255, 255, 255, 0.897)
+}
+
+.darkMode .vazio {
+    background-color: #2E245E;
+}
+
+.darkMode .navegacao button {
+    border: transparent;
+    background-color: #2E245E;
+}
+
+.darkMode .navegacao .darkToggle {
+    background-color: #2E245E;
 }
